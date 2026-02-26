@@ -33,14 +33,14 @@ jobs:
       - name: Build with PyInstaller (macOS)
         if: matrix.os == 'macos-latest'
         run: |
-          pyinstaller --onefile --windowed Project/main.py
+          pyinstaller --onefile --windowed main.py
           mv dist/main dist/IndexNotifier_mac
         shell: bash
 
       - name: Build with PyInstaller (Windows)
         if: matrix.os == 'windows-latest'
         run: |
-          pyinstaller --onefile --windowed Project/main.py
+          pyinstaller --onefile --windowed main.py
           mv dist/main.exe dist/IndexNotifier_win.exe
         shell: bash
 
